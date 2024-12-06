@@ -238,11 +238,11 @@ function CreateTrip() {
           <DialogContent>
             <DialogHeader>
               <DialogDescription>
-                <img src="/logo.svg" alt="Logo" />
+                <img src="/Elogo.jpg" alt="Logo" className="mx-auto h-[100px] rounded-full"/>
                 <h2 className="font-bold text-lg mt-7">Sign In with Google</h2>
                 <p>Sign In to the App with Google Authentication</p>
-                <Button onClick={login} className="mt-3 gap-3 items-center">
-                  <FcGoogle className="h-7 w-7" /> Sign In with Google
+                <Button onClick={login} className="bg-[#092744] mt-3 gap-3 items-center">
+                  <FcGoogle className=" h-7 w-7" /> Sign In with Google
                 </Button>
               </DialogDescription>
             </DialogHeader>
