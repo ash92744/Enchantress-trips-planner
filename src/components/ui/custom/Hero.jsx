@@ -52,7 +52,7 @@ function Hero() {
       {/* Get Started Button */}
       <Link to={"/Create-Trip"}>
         <Button className="py-2 px-4 md:py-3 md:px-6 lg:py-4 lg:px-8 text-sm md:text-base lg:text-lg">
-          Lets Go!
+          Let's Go!
         </Button>
       </Link>
 

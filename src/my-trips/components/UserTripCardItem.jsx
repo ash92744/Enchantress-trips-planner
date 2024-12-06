@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function UserTripCardItem({ trip }) {
   return (
     <Link to={"/view-trip/" + trip?.id} style={{ textDecoration: "none" }}>
-      <div className="mt-0.1 hover:scale-105 transition-all rounded-2xl">
+      <div className="hover:scale-105 transition-all rounded-2xl">
         <img
           src="/trips.jpg"
           className="h-[200px] xs:h-[120px] s:h-[150px] sm:h-[170px] object-cover rounded-3xl h-[200px] border border-white"

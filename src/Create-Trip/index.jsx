@@ -177,7 +177,7 @@ function CreateTrip() {
                 <div
                   key={index}
                   onClick={() => handleInputChange("budget", item.title)}
-                  className={`p-4 border rounded-lg hover:shadow-lg
+                  className={`p-4 border border-white rounded-3xl hover:shadow-lg
                 ${formData?.budget === item.title
                       ? "shadow-lg border-black bg-white text-black"
                       : ""
@@ -202,7 +202,7 @@ function CreateTrip() {
                 <div
                   key={index}
                   onClick={() => handleInputChange("traveler", item.people)}
-                  className={`p-4 border rounded-lg hover:shadow-lg
+                  className={`p-4 border border-white rounded-3xl hover:shadow-lg
                 ${formData?.traveler === item.people
                       ? "shadow-lg border-black bg-white text-black"
                       : ""
