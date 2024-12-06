@@ -149,9 +149,23 @@ function CreateTrip() {
               placeholder={"Ex-3"}
               type="number"
               className="text-black"
-              onChange={(e) => handleInputChange("noOfDays", e.target.value)}
+              onChange={(e) => {
+                const value = e.target.value;
+                if (value === "") {
+                  handleInputChange("noOfDays", value); // Allow empty input
+                } else {
+                  const number = parseInt(value, 10);
+                  if (number > 0 && number < 8) {
+                    handleInputChange("noOfDays", number);
+                  } else {
+                    alert("Please enter a number between 1-7 (within a week)");
+                  }
+                }
+              }}
             />
           </div>
+
+
 
           {/* Budget Selection */}
           <div>
@@ -164,11 +178,10 @@ function CreateTrip() {
                   key={index}
                   onClick={() => handleInputChange("budget", item.title)}
                   className={`p-4 border rounded-lg hover:shadow-lg
-                ${
-                  formData?.budget === item.title
-                    ? "shadow-lg border-black bg-white text-black"
-                    : ""
-                } 
+                ${formData?.budget === item.title
+                      ? "shadow-lg border-black bg-white text-black"
+                      : ""
+                    } 
                 hover:scale-105 transition-all cursor-pointer rounded-3xl`}
                 >
                   <h5 className="text-3xl sm:text-4xl">{item.icon}</h5>
@@ -190,11 +203,10 @@ function CreateTrip() {
                   key={index}
                   onClick={() => handleInputChange("traveler", item.people)}
                   className={`p-4 border rounded-lg hover:shadow-lg
-                ${
-                  formData?.traveler === item.people
-                    ? "shadow-lg border-black bg-white text-black"
-                    : ""
-                }
+                ${formData?.traveler === item.people
+                      ? "shadow-lg border-black bg-white text-black"
+                      : ""
+                    }
                 hover:scale-105 transition-all cursor-pointer rounded-3xl`}
                 >
                   <h5 className="text-3xl sm:text-4xl">{item.icon}</h5>

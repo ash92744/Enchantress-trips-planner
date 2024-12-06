@@ -34,8 +34,7 @@ function Hero() {
       <button
         onClick={playAudio}
         className="py-2 px-4 border border-white bg-[#000000] text-white font-bold text-sm md:text-base lg:text-lg rounded-lg hover:!text-[#092744] hover:bg-[#ffffff] transition duration-300"
-      >
-        Hear Enchantress🔊
+      >Enchantress🔊
       </button>
 
       {/* AI Trip Planner Heading */}
@@ -53,7 +52,7 @@ function Hero() {
       {/* Get Started Button */}
       <Link to={"/Create-Trip"}>
         <Button className="py-2 px-4 md:py-3 md:px-6 lg:py-4 lg:px-8 text-sm md:text-base lg:text-lg">
-          Get Started
+          Lets Go!
         </Button>
       </Link>
 
